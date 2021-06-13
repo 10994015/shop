@@ -27,7 +27,7 @@
 	position: absolute;
 	top: -100000;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 414px){
 	.logo{
 		width: 160px;
 		height: 40px;
