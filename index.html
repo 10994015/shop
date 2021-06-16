@@ -16,6 +16,7 @@
 .content,.hot,.contact{
 	opacity: 0;
 }
+
 .ad{
 		width: 100%;
 		height: 150%;
@@ -25,8 +26,8 @@
 		background: rgb(0,0,0,.7);
 		z-index: 9999999999999;
 		display: flex;
-			justify-content: center;
-			padding-top: 70px;
+		justify-content: center;
+		padding-top: 70px;
 		}
 		
 		.ad div{
@@ -51,6 +52,7 @@
 			border-radius: 50%;
 			text-align: center;
 			line-height: 30px;
+			opacity: 1;
 		}
 		.ad a:hover{
 			color: #fff;
@@ -163,7 +165,7 @@
 			</div>
 		</a>
 		<img src="img/18.jpg" alt="">
-		<h1>超人氣商品<p><br><br>
+		<h1>人氣商品<p><br><br>
 18號（ 人造人間18号 ） 聲：伊藤美紀、楊凱凱（衛視中文台）<br> 蓋洛博士從人類改造的的永久能源式人造人，本名是「 ラズリ 」<br>，和17號同樣痛恨被蓋洛博士擅自改造，同樣不聽從他<br>命令的失敗作品。<br><br>現在只要NTD:370！要買要快！</p></h1>
 
 	</div>
@@ -179,20 +181,36 @@
 	</div>
 </div>
 
-<div class="ad" id="ad">
+</style>
+
+<div class="ad" id="ad" >
 <div>
-	<img src="img/ad.jpg" alt="">
+	<img src="img/ad.jpg" alt="" id="ad-img">
 	<a href="#" title="" id="hide"><i class="gg-close"></i></a>
 </div>
 </div>
 <script type="text/javascript">
-	window.onload=function(){
+    $(document).ready(function(){
+        
+        $('#hide').click(function(){
+        	$('#ad').fadeOut();
+        })
+        
+
+    })
+	/*window.onload=function(){
 		document.getElementById('hide').onclick=hide;
+		document.getElementById('ad')=ad;
 		function hide(){
-			document.getElementById('ad').style.display='none';
+			ad.style.opacity='0';
+			ad.style.transition='.5s';
+			if(ad.style.opacity =='0'){
+				ad.style.display='none';
+			}
+
 			return false;
 		}
-	}
+	}*/
 </script>
 <script>
 var slideIndex = 0;
@@ -212,7 +230,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000);
 }
 </script>
 </body>
