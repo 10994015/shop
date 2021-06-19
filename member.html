@@ -26,10 +26,19 @@
 		filter: grayscale(100%);
 		transform: scale(1.1);
 	}
-
-		
+	.singin{
+		height: 700px;
+		padding-top: 50px;
+		}
+		.member h1{
+			font-size: 24px;
+			color:#333;
+		}
+		.signinform{
+			margin-top: 450px;
+		}
 	</style>
-
+	
 </head>
 <body>
 <input type="checkbox" id="menu_control">
@@ -47,25 +56,24 @@
 		</ul>
 	</div>
 <div class="all">
-	<div class="banner">
-		<img src="img/banner7.jpg" alt="">
-		<span>
-		<h1>Sign in</h1><br><br><br><br><br><br>
-		<p>疫情期間全世界都有機會傳染病毒給你，只有公仔不會。</p>
-		</span>
-	</div>
+	
 	<div class="singin" id="mao">
 		<div class="singintext">
-			<h1>Sign in</h1>
-			<span><a href="prodact.html" title="" style="margin-left: 0;">store</a>/<a href="join.html" title="">Join us</a></span><br><br>
-			<p>加入我們，發掘數千種不同的公仔，在這裡你所想得到的公仔都能夠在這裡找到，註冊一次即可享有會員的所有福利， 心動不如馬上行動，立刻點及旁邊的加入會員吧!</p>
+			<h1>Member</h1>
+			
+			<div style="height: 500px;" class="member">
+			<img src="img/rear.png" alt="" style="width: 200px;height: 200px;"><br><br>
+			<h1>姓名:孫悟空</h1>
+			<h1>使用者帳戶:user</h1>
+			<h1>手機:0912345678</h1>
+			<h1>email:09123456789@gmail.com</h1>
+			<h1>性別:男</h1>
+			<h1>生日:90/1/1</h1>
+			</div>
 		</div>
 		<div class="signinform">
-		<form action="member.html" method="get" accept-charset="utf-8">
-			<input type="text" name="" placeholder="Username" id="user">
-			<input type="password" name="" placeholder="Password" id="pass">
-			<a href="member.html" title="" id="singin"><input type="button" name="" value="Sing in" class="btn" ></a>
-			</form>
+			<input type="button" name="" value="編輯資料" class="btn">
+			<input type="button" name="" value="登出" class="btn">
 		</div>
 	</div>
 	<div class="contact">
@@ -78,15 +86,6 @@
 			©My Hao Doll 2021 ALL RIGHTS RESERVED
 		</footer>
 	</div>
-	<script>
-		document.getElementById('user')=user;
-		document.getElementById('pass')=pass;
-		document.getElementById('singin').onclick=singin;
-
-		function singin(){
-			singin.href="member.html";
-		}
-	</script>
 </div>
 </body>
 </html>
