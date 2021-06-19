@@ -64,7 +64,7 @@
 		<form action="member.html" method="get" accept-charset="utf-8">
 			<input type="text" name="" placeholder="Username" id="user">
 			<input type="password" name="" placeholder="Password" id="pass">
-			<a href="member.html" title="" id="singin"><input type="button" name="" value="Sing in" class="btn" ></a>
+			<input type="button" name="" value="Sing in" class="btn"  id="singin">
 			</form>
 		</div>
 	</div>
@@ -80,10 +80,16 @@
 	</div>
 	<script>
 		
+        var user=document.getElementById('user');
+		var pass=document.getElementById('pass');
 		document.getElementById('singin').onclick=singin;
-
-		function singin(){
+	function singin(){
+		if (user.value=="user"&&pass.value=="1234") {
 			alert('登入成功!');
+			window.location.href='member.html';
+		}else{
+			alert('帳號或密碼錯誤!');
+		}
 		}
 	</script>
 </div>
